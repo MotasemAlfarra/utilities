@@ -11,7 +11,7 @@ def project_on_ellipse(A, c, y):
   
   outputs:
       projection: numpy array of the projected version of y
-      a bool represents of indeed y is in the desired set.
+      a bool: True if the projected vector of y is in the desired set.
    """
 
   def check(A, y):
@@ -28,7 +28,7 @@ def project_on_ellipse(A, c, y):
   #Check if y belongs to our region
   if check(A, y):
     print('your vector is already in the desired set')
-    return y
+    return y, True
 
   print('projecting your vector ...')
   t = solve(A, y)
